@@ -1,3 +1,4 @@
+
 import {
   Box,
   Flex,
@@ -8,7 +9,6 @@ import {
 } from "@chakra-ui/react";
 
 import { useNavigate } from "react-router-dom";
-
 import { useProfileStore } from "../store/profileStore";
 
 export default function Header() {
@@ -17,11 +17,12 @@ export default function Header() {
   const { name, email } = useProfileStore();
 
   return (
-    <Box mb={8}>
+    <Box mb={{ base: 4, md: 8 }}>
       <Flex
-        align="center"
+        direction={{ base: "column", md: "row" }}
+        align={{ base: "flex-start", md: "center" }}
         bg="white"
-        p={5}
+        p={{ base: 4, md: 5 }}
         borderRadius="16px"
         boxShadow="sm"
       >
@@ -29,8 +30,11 @@ export default function Header() {
 
         <Box>
           <Heading
-            size="lg"
             color="#173B7A"
+            fontSize={{
+              base: "24px",
+              md: "32px",
+            }}
           >
             Dashboard
           </Heading>
@@ -38,16 +42,21 @@ export default function Header() {
           <Text
             color="gray.500"
             mt={1}
+            fontSize={{
+              base: "14px",
+              md: "16px",
+            }}
           >
             Welcome back! Manage your study tasks efficiently.
           </Text>
         </Box>
 
-        <Spacer />
+        <Spacer display={{ base: "none", md: "block" }} />
 
         {/* Profile */}
 
         <Flex
+          mt={{ base: 4, md: 0 }}
           align="center"
           cursor="pointer"
           onClick={() => navigate("/settings")}
@@ -59,21 +68,30 @@ export default function Header() {
             name={name}
             bg="#2563EB"
             color="white"
-            size="sm"
+            size={{
+              base: "sm",
+              md: "md",
+            }}
             mr={3}
           />
 
           <Box>
             <Text
               fontWeight="bold"
-              fontSize="14px"
+              fontSize={{
+                base: "14px",
+                md: "16px",
+              }}
             >
               {name}
             </Text>
 
             <Text
-              fontSize="12px"
               color="gray.500"
+              fontSize={{
+                base: "12px",
+                md: "14px",
+              }}
             >
               {email}
             </Text>
@@ -83,3 +101,4 @@ export default function Header() {
     </Box>
   );
 }
+

@@ -18,14 +18,21 @@ export default function Completed() {
   );
 
   return (
-    <Box>
+    <Box
+      w="100%"
+      p={{ base: 2, md: 4, lg: 6 }}
+    >
       {/* Header */}
       <Header />
 
       {/* Page Title */}
-      <Box mb={6}>
+      <Box mb={{ base: 4, md: 6 }}>
         <Heading
-          size="lg"
+          fontSize={{
+            base: "24px",
+            md: "30px",
+            lg: "34px",
+          }}
           color="#173B7A"
         >
           Completed Tasks
@@ -34,6 +41,10 @@ export default function Completed() {
         <Text
           mt={1}
           color="gray.500"
+          fontSize={{
+            base: "14px",
+            md: "16px",
+          }}
         >
           Review all the study tasks you have completed.
         </Text>
@@ -43,15 +54,16 @@ export default function Completed() {
       {completedTasks.length === 0 ? (
         <Box
           bg="white"
-          p={12}
+          p={{ base: 6, md: 12 }}
           borderRadius="20px"
           textAlign="center"
           boxShadow="sm"
         >
-          
-
           <Heading
-            size="md"
+            fontSize={{
+              base: "20px",
+              md: "24px",
+            }}
             color="gray.700"
           >
             No Completed Tasks
@@ -60,13 +72,17 @@ export default function Completed() {
           <Text
             mt={2}
             color="gray.500"
+            fontSize={{
+              base: "14px",
+              md: "16px",
+            }}
           >
             Complete a study task to see it here.
           </Text>
         </Box>
       ) : (
         <VStack
-          spacing={4}
+          spacing={{ base: 3, md: 4 }}
           align="stretch"
         >
           {completedTasks.map((task) => (

@@ -1,11 +1,21 @@
+
 import {
   Box,
   Flex,
   Text,
   VStack,
   Icon,
+  IconButton,
+  Drawer,
+  DrawerOverlay,
+  DrawerContent,
+  DrawerBody,
+  useDisclosure,
+  Show,
+  Hide,
 } from "@chakra-ui/react";
 
+import { HamburgerIcon } from "@chakra-ui/icons";
 import { NavLink } from "react-router-dom";
 
 import {
@@ -45,24 +55,12 @@ const menuItems = [
 ];
 
 export default function Sidebar() {
-  return (
-    <Box
-      position="fixed"
-      left={0}
-      top={0}
-      w="260px"
-      h="100vh"
-      bg="#1A202C"
-      color="white"
-      px={6}
-      py={8}
-      boxShadow="lg"
-    >
-      {/* Logo */}
+  const { isOpen, onOpen, onClose } =
+    useDisclosure();
 
+  const Menu = () => (
+    <>
       <Box mb={12}>
-        
-
         <Text
           mt={3}
           textAlign="center"
@@ -81,29 +79,31 @@ export default function Sidebar() {
         </Text>
       </Box>
 
-      {/* Menu */}
-
       <VStack spacing={3} align="stretch">
         {menuItems.map((item) => (
           <NavLink
-  key={item.path}
-  to={item.path}
-  style={{
-    textDecoration: "none",
-    color: "inherit",
-  }}
->
+            key={item.path}
+            to={item.path}
+            style={{
+              textDecoration: "none",
+              color: "inherit",
+            }}
+            onClick={onClose}
+          >
             {({ isActive }) => (
               <Flex
                 align="center"
                 p={4}
                 borderRadius="12px"
-                bg={isActive ? "#2348FF" : "transparent"}
+                bg={
+                  isActive
+                    ? "#2348FF"
+                    : "transparent"
+                }
                 _hover={{
                   bg: "#E2E8F0",
                   color: "#1A202C",
                 }}
-                transition="0.2s ease"
                 cursor="pointer"
               >
                 <Icon
@@ -112,22 +112,65 @@ export default function Sidebar() {
                 />
 
                 <Text
-  ml={4}
-  fontSize="16px"
-  fontFamily="Heloni Regular"
-  fontWeight="400"
->
-  {item.name}
-</Text>
+                  ml={4}
+                  fontSize="16px"
+                  fontFamily="Heloni Regular"
+                >
+                  {item.name}
+                </Text>
               </Flex>
             )}
           </NavLink>
         ))}
       </VStack>
+    </>
+  );
 
-      
+  return (
+    <>
+      <Show below="md">
+        <IconButton
+          aria-label="Menu"
+          icon={<HamburgerIcon />}
+          position="fixed"
+          top={4}
+          left={4}
+          zIndex={1000}
+          onClick={onOpen}
+        />
 
-      
-    </Box>
+        <Drawer
+          isOpen={isOpen}
+          placement="left"
+          onClose={onClose}
+        >
+          <DrawerOverlay />
+
+          <DrawerContent bg="#1A202C" color="white">
+            <DrawerBody pt={8}>
+              <Menu />
+            </DrawerBody>
+          </DrawerContent>
+        </Drawer>
+      </Show>
+
+      <Hide below="md">
+        <Box
+          position="fixed"
+          left={0}
+          top={0}
+          w="260px"
+          h="100vh"
+          bg="#1A202C"
+          color="white"
+          px={6}
+          py={8}
+          boxShadow="lg"
+        >
+          <Menu />
+        </Box>
+      </Hide>
+    </>
   );
 }
+

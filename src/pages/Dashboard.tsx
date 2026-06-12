@@ -11,7 +11,10 @@ export default function Dashboard() {
   const [search, setSearch] = useState("");
 
   return (
-    <Box>
+    <Box
+      w="100%"
+      p={{ base: 2, md: 4, lg: 6 }}
+    >
       {/* Header */}
       <Header />
 

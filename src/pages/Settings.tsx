@@ -45,14 +45,26 @@ export default function Settings() {
   return (
     <Box
       bg="white"
-      p={8}
+      w="100%"
+      maxW={{
+        base: "100%",
+        md: "700px",
+      }}
+      mx="auto"
+      p={{
+        base: 4,
+        md: 8,
+      }}
       borderRadius="16px"
       boxShadow="sm"
     >
       <Heading
-        size="lg"
-        mb={6}
         color="#173B7A"
+        mb={6}
+        fontSize={{
+          base: "24px",
+          md: "32px",
+        }}
       >
         Profile Information
       </Heading>
@@ -73,6 +85,10 @@ export default function Settings() {
           <Text
             mb={2}
             fontWeight="600"
+            fontSize={{
+              base: "14px",
+              md: "16px",
+            }}
           >
             Name
           </Text>
@@ -83,6 +99,7 @@ export default function Settings() {
               setNewName(e.target.value)
             }
             placeholder="Enter your name"
+            size="lg"
           />
         </Box>
 
@@ -90,6 +107,10 @@ export default function Settings() {
           <Text
             mb={2}
             fontWeight="600"
+            fontSize={{
+              base: "14px",
+              md: "16px",
+            }}
           >
             Email
           </Text>
@@ -100,12 +121,17 @@ export default function Settings() {
               setNewEmail(e.target.value)
             }
             placeholder="Enter your email"
+            size="lg"
           />
         </Box>
 
         <Button
           colorScheme="blue"
-          w="180px"
+          w={{
+            base: "100%",
+            md: "180px",
+          }}
+          size="lg"
           onClick={handleSave}
         >
           Save Changes

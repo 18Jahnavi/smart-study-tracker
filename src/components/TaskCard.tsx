@@ -1,3 +1,4 @@
+
 import {
   Box,
   Flex,
@@ -54,13 +55,10 @@ export default function TaskCard({
     switch (task.priority) {
       case "High":
         return "red";
-
       case "Medium":
         return "orange";
-
       case "Low":
         return "green";
-
       default:
         return "gray";
     }
@@ -70,7 +68,7 @@ export default function TaskCard({
     <>
       <Box
         bg="white"
-        p={5}
+        p={{ base: 4, md: 5 }}
         borderRadius="16px"
         boxShadow="sm"
         border="1px solid"
@@ -82,10 +80,16 @@ export default function TaskCard({
         }}
       >
         <Flex
-          align="center"
+          direction={{ base: "column", md: "row" }}
           justify="space-between"
+          align={{ base: "flex-start", md: "center" }}
+          gap={4}
         >
-          <Flex align="center" flex="1">
+          <Flex
+            align="center"
+            flex="1"
+            w="100%"
+          >
             <Checkbox
               isChecked={task.completed}
               onChange={() =>
@@ -95,10 +99,13 @@ export default function TaskCard({
               mr={4}
             />
 
-            <Box>
+            <Box flex="1">
               <Text
                 fontWeight="600"
-                fontSize="16px"
+                fontSize={{
+                  base: "15px",
+                  md: "16px",
+                }}
                 textDecoration={
                   task.completed
                     ? "line-through"
@@ -125,7 +132,14 @@ export default function TaskCard({
             </Box>
           </Flex>
 
-          <Flex align="center" gap={2}>
+          <Flex
+            gap={2}
+            w={{ base: "100%", md: "auto" }}
+            justify={{
+              base: "flex-end",
+              md: "flex-start",
+            }}
+          >
             <IconButton
               aria-label="Edit Task"
               icon={<EditIcon />}
@@ -166,7 +180,7 @@ export default function TaskCard({
         onClose={onClose}
       >
         <AlertDialogOverlay>
-          <AlertDialogContent>
+          <AlertDialogContent mx={4}>
             <AlertDialogHeader
               fontSize="lg"
               fontWeight="bold"
@@ -204,3 +218,4 @@ export default function TaskCard({
     </>
   );
 }
+
