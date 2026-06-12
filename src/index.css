@@ -1,0 +1,181 @@
+/* Google Font */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+/* Reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+
+body {
+  font-family: "Inter", sans-serif;
+  background: #f4f7fb;
+  color: #1f2937;
+  overflow-x: hidden;
+}
+
+/* Root */
+
+#root {
+  min-height: 100vh;
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #eef2f7;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #b8c2d1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8c9aad;
+}
+
+/* Links */
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Buttons */
+
+button {
+  transition: all 0.3s ease;
+}
+
+/* Inputs */
+
+input,
+select {
+  outline: none;
+}
+
+/* Cards */
+
+.card-hover {
+  transition: all 0.25s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-3px);
+}
+
+/* Table Rows */
+
+.task-row {
+  transition: 0.25s;
+}
+
+.task-row:hover {
+  background: #f8faff;
+}
+
+/* Badge */
+
+.priority-badge {
+  border-radius: 20px;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* Dashboard */
+
+.dashboard-container {
+  padding: 30px;
+}
+
+/* Sidebar */
+
+.sidebar-logo {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.sidebar-logo h1 {
+  color: white;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.sidebar-logo p {
+  color: #cbd5e1;
+  font-size: 13px;
+}
+
+/* Stats Cards */
+
+.stats-card {
+  background: white;
+  border-radius: 18px;
+  padding: 24px;
+  transition: 0.3s;
+}
+
+.stats-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* Task Card */
+
+.task-card {
+  background: white;
+  border-radius: 16px;
+  padding: 18px;
+  border: 1px solid #e5e7eb;
+  transition: 0.25s;
+}
+
+.task-card:hover {
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.08);
+}
+
+/* Header */
+
+.header-card {
+  background: white;
+  border-radius: 18px;
+  padding: 20px;
+}
+
+/* Search */
+
+.search-box {
+  background: white;
+  border-radius: 14px;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .dashboard-container {
+    padding: 16px;
+  }
+
+  .sidebar-logo h1 {
+    font-size: 20px;
+  }
+
+  .stats-card {
+    padding: 18px;
+  }
+
+  .task-card {
+    padding: 14px;
+  }
+}
