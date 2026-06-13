@@ -248,3 +248,102 @@ Configured the project for deployment by:
 * React Router Navigation
 * Responsive Layout
 * GitHub Deployment Preparation
+
+# Problems/Challenges Faced During Assignment 4: Smart Study Task Tracker
+
+## 1. Setting Up the Project
+
+* Faced difficulty creating the React + TypeScript project.
+* Had to install and configure required dependencies correctly.
+
+## 2. Installing Chakra UI and Zustand
+
+* Encountered issues while installing Chakra UI and Zustand packages.
+* Needed to verify whether the packages were installed correctly.
+
+## 3. React Icons Import Errors
+
+* Faced import errors such as "Failed to resolve import".
+* Installed the correct `react-icons` package and updated imports.
+
+## 4. Configuring React Router
+
+* Initially had issues with page navigation.
+* Configured routes properly to navigate between different pages.
+
+## 5. Sidebar Layout Issues
+
+* Sidebar design did not match the expected UI.
+* Dashboard content was hidden behind the sidebar due to fixed width and margins.
+* Adjusted spacing and layout to fix the issue.
+
+## 6. Styling and Color Matching
+
+* Faced challenges selecting the correct CSS colors and hover effects.
+* Matched colors using RGB values to achieve the desired design.
+
+## 7. Task Management Logic
+
+* Implementing add, edit, delete, and complete functionalities required proper state updates.
+* Ensured task changes reflected immediately in the UI.
+
+## 8. Zustand State Management
+
+* Understanding global state management with Zustand was initially challenging.
+* Learned how to update and persist state effectively.
+
+## 9. Data Persistence
+
+* Without persistence, tasks disappeared after refreshing the page.
+* Solved this by using Zustand's `persist` middleware.
+
+## 10. Edit Task Functionality
+
+* Implementing task editing while preserving existing task data required additional logic.
+
+## 11. Delete Confirmation Dialog
+
+* Needed to add a confirmation popup before deleting tasks.
+* Integrated Chakra UI's `AlertDialog` component successfully.
+
+## 12. Profile Management
+
+* Creating a profile settings page and synchronizing updates with the dashboard required managing shared state.
+
+## 13. Form Validation
+
+* Prevented users from saving empty task titles or profile fields.
+* Added validation checks before saving.
+
+## 14. Search Functionality
+
+* Implementing real-time search and filtering tasks by title required careful filtering logic.
+
+## 15. Statistics Calculation
+
+* Calculating completed, pending, and high-priority task counts and progress percentage required dynamic updates whenever tasks changed.
+
+## 16. Mobile Responsiveness
+
+* Fixed-width layouts caused display issues on smaller screens.
+* Updated components with responsive Chakra UI properties for better mobile support.
+
+## 17. TypeScript Errors
+
+* Faced TypeScript warnings and type-related issues while defining interfaces and props.
+* Corrected type definitions to improve code safety.
+
+## 18. Git and GitHub
+
+* Encountered issues while pushing code and managing branches.
+* Learned how to commit, push, and manage repositories correctly.
+
+## 19. GitHub Pages Deployment
+
+* Faced deployment issues such as missing `deploy` scripts and incorrect GitHub Pages configuration.
+* Updated `package.json` and deployment settings to publish the project.
+
+## 20. Testing and Debugging
+
+* Tested each feature multiple times.
+* Fixed UI alignment issues, navigation problems, and state synchronization bugs to ensure smooth functionality.
