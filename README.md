@@ -347,3 +347,261 @@ Configured the project for deployment by:
 
 * Tested each feature multiple times.
 * Fixed UI alignment issues, navigation problems, and state synchronization bugs to ensure smooth functionality.
+
+# Installations Done for Assignment 4: Smart Study Task Tracker
+
+## 1. Create React + Vite Project
+
+### Installation Command
+
+```bash
+npm create vite@latest smart-study-tracker
+```
+
+### Go to Project Folder
+
+```bash
+cd smart-study-tracker
+```
+
+### Install Dependencies
+
+```bash
+npm install
+```
+
+### Verify
+
+```bash
+npm run dev
+```
+
+---
+
+# 2. Install Chakra UI
+
+### Installation Command
+
+```bash
+npm install @chakra-ui/react @emotion/react @emotion/styled framer-motion
+```
+
+### Verify
+
+```bash
+npm list @chakra-ui/react
+```
+
+Expected output:
+
+```
+@chakra-ui/react@2.x.x
+```
+
+---
+
+# 3. Install React Icons
+
+### Installation Command
+
+```bash
+npm install react-icons
+```
+
+### Verify
+
+```bash
+npm list react-icons
+```
+
+Expected output:
+
+```
+react-icons@5.x.x
+```
+
+---
+
+# 4. Install Zustand
+
+### Installation Command
+
+```bash
+npm install zustand
+```
+
+### Verify
+
+```bash
+npm list zustand
+```
+
+Expected output:
+
+```
+zustand@5.x.x
+```
+
+---
+
+# 5. Install React Router DOM
+
+### Installation Command
+
+```bash
+npm install react-router-dom
+```
+
+### Verify
+
+```bash
+npm list react-router-dom
+```
+
+Expected output:
+
+```
+react-router-dom@7.x.x
+```
+
+---
+
+# 6. Install TypeScript (Already Included with Vite Template)
+
+### Verify
+
+```bash
+npm list typescript
+```
+
+Expected output:
+
+```
+typescript@6.x.x
+```
+
+---
+
+# 7. Install gh-pages (For Deployment)
+
+### Installation Command
+
+```bash
+npm install gh-pages --save-dev
+```
+
+### Verify
+
+```bash
+npm list gh-pages
+```
+
+Expected output:
+
+```
+gh-pages@6.x.x
+```
+
+---
+
+# 8. Check All Installed Packages
+
+```bash
+npm list
+```
+
+This command displays all installed dependencies in the project.
+
+---
+
+# 9. Check Specific Package
+
+```bash
+npm list <package-name>
+```
+
+Example:
+
+```bash
+npm list zustand
+npm list react-icons
+npm list @chakra-ui/react
+npm list react-router-dom
+```
+
+---
+
+# 10. Check Project Scripts
+
+```bash
+npm run
+```
+
+This displays all available scripts such as:
+
+* dev
+* build
+* preview
+* lint
+* deploy (if configured)
+
+---
+
+# 11. Build the Project
+
+```bash
+npm run build
+```
+
+Creates the production-ready build.
+
+---
+
+# 12. Run Development Server
+
+```bash
+npm run dev
+```
+
+Starts the local development server.
+
+---
+
+# 13. Preview Production Build
+
+```bash
+npm run preview
+```
+
+Runs the production build locally for testing.
+
+---
+
+# Summary of Installed Libraries
+
+| Library          | Purpose                         |
+| ---------------- | ------------------------------- |
+| React            | Build UI components             |
+| Vite             | Fast development and build tool |
+| TypeScript       | Type safety                     |
+| Chakra UI        | UI component library            |
+| Emotion          | Styling support for Chakra UI   |
+| Framer Motion    | Animations                      |
+| React Router DOM | Page navigation                 |
+| Zustand          | State management                |
+| React Icons      | Icon library                    |
+| gh-pages         | Deploy project to GitHub Pages  |
+
+```
+
+### Technologies Used
+- React
+- TypeScript
+- Vite
+- Chakra UI
+- Zustand
+- React Router DOM
+- React Icons
+- Git & GitHub
+- GitHub Pages
+```
